@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'users#login'
   post '/users/authenticate', to: 'users#authenticate'
+  get '/users/logout', to: 'users#logout'
   get '/welcome', to: 'welcome#index'
 
   # Example of regular route:

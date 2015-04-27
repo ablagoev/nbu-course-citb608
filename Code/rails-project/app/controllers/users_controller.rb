@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout 'login'
+
   def login
   end
 
@@ -7,8 +9,14 @@ class UsersController < ApplicationController
 
     if @user
       redirect_to '/welcome'
+      session[:user_id] = @user.id
     else
       redirect_to '/'
     end
+  end
+
+  def logout
+    reset_session
+    redirect_to '/'
   end
 end
