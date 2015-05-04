@@ -1,1 +1,29 @@
 <h1>Welcome to the protected area!</h1>
+
+<form class="form-inline" method="post" action="/users/status">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon">Status</div>
+      <input type="text" class="form-control" id="status" name="status" placeholder="What's up?">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+<table class="table table-stripped">
+<thead>
+  <tr>
+    <th>Email</th>
+    <th>Status</th>
+  </tr>
+</thead>
+<tbody>
+<% @statuses.each do |status| %>
+    <tr>
+      <td><%= status.user.email %></td>
+      <td><%= status.status %></td>
+    </tr>
+<% end %>
+</tbody>
+</table>
