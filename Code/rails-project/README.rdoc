@@ -1,28 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Installing the application:
 
-Things you may want to cover:
+* mkdir project; cd project;
 
-* Ruby version
+* git clone git@github.com:ablagoev/nbu-course-citb608.git
 
-* System dependencies
+* cd Code/rails-project;
 
-* Configuration
+* bundle install
 
-* Database creation
+* bundle exec rake db:setup
 
-* Database initialization
+* bundle exec rake db:migrate
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* bundle exec rails s
