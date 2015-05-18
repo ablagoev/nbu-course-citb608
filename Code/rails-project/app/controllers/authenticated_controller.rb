@@ -1,7 +1,9 @@
+# Base controller which takes care ot authenticatio
 class AuthenticatedController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticate!
 
-  def authenticate
+  # check if user is logged in and fetch from database
+  def authenticate!
     if session[:user_id]
       @user = User.find(session[:user_id])
     else
