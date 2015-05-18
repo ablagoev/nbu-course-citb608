@@ -4,9 +4,9 @@ Installing the application:
 
 * mkdir project; cd project;
 
-* git clone git@github.com:ablagoev/nbu-course-citb608.git
+* git clone https://github.com/ablagoev/nbu-course-citb608.git .
 
-* cd Code/rails-project
+* cd nbu-course-citb608/Code/rails-project
 
 * bundle install
 
