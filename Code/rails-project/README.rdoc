@@ -14,4 +14,12 @@ Installing the application:
 
 * bundle exec rake db:migrate
 
-* bundle exec rails s
+* bundle exec rails server
+
+Adding a test user:
+
+* bundle exec rails console
+
+* User.create(email: 'test@example.com', password: User.encrypted_password('123456'))
+
+* User.all
