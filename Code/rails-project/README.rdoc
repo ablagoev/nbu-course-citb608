@@ -6,7 +6,7 @@ Installing the application:
 
 * git clone git@github.com:ablagoev/nbu-course-citb608.git
 
-* cd Code/rails-project;
+* cd Code/rails-project
 
 * bundle install
 
