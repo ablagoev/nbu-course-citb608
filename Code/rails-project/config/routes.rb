@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   post '/users/status', to: 'welcome#status'
   get '/users/logout', to: 'users#logout'
   get '/welcome', to: 'welcome#index'
+  get '/welcome/delete', to: 'welcome#delete'
+  get '/users/password', to: 'users#password'
+  post '/users/password', to: 'users#update_password'
+  get '/users/email', to: 'users#email'
+  post '/users/email', to: 'users#update_email'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
