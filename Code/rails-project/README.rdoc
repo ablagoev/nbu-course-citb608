@@ -4,7 +4,7 @@ Installing the application:
 
 * mkdir project; cd project;
 
-* git clone https://github.com/ablagoev/nbu-course-citb608.git .
+* git clone \h\t\t\p\s\:\/\/github.com/ablagoev/nbu-course-citb608.git .
 
 * cd nbu-course-citb608/Code/rails-project
 
