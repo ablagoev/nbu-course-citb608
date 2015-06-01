@@ -69,8 +69,16 @@ class UsersController < AuthenticatedController
       return
     end
 
-    # TODO: validate email
     @user.email = params[:email]
+
+    # If user is not valid
+    # show an error
+    unless @user.valid?
+      flash[:error] = 'Email not valid.'
+      redirect_to '/users/email'
+      return
+    end
+
     @user.save
 
     flash[:info] = 'Email updated!'

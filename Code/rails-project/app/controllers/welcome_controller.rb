@@ -12,7 +12,12 @@ class WelcomeController < AuthenticatedController
   end
 
   def status
-    UserStatus.create(user_id: @user.id, status: params[:status])
+    @status = UserStatus.create(user_id: @user.id, status: params[:status])
+
+    # Validation failed
+    # display an error to the user
+    flash[:error] = 'Invalid status length.' unless @status.valid?
+
     redirect_to '/welcome'
   end
 
