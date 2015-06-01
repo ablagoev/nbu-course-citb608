@@ -2,7 +2,7 @@ class WelcomeController < AuthenticatedController
   def index
     # Parse sorting
     @sort = params[:order].to_sym if params[:order] && [:asc, :desc].include?(params[:order].to_sym)
-    @sort = :asc if !params[:order]
+    @sort = :asc unless params[:order]
 
     # Pass new sorting for view
     @order = :desc
@@ -12,7 +12,7 @@ class WelcomeController < AuthenticatedController
   end
 
   def status
-    UserStatus.create(user_id:@user.id, status: params[:status])
+    UserStatus.create(user_id: @user.id, status: params[:status])
     redirect_to '/welcome'
   end
 

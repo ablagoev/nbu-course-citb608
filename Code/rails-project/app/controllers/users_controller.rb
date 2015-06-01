@@ -1,6 +1,6 @@
 class UsersController < AuthenticatedController
   # Do not check for login on login form and authenticate action
-  skip_before_filter :authenticate!, only: [:login, :authenticate]
+  skip_before_action :authenticate!, only: [:login, :authenticate]
 
   # Display login form
   def login
